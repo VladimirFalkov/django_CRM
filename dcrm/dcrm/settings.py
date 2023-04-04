@@ -1,6 +1,7 @@
 
 import pymysql
 from pathlib import Path
+from .secret_settings import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-u-1)=!8hrc$+p8ycbv#xypk6kx=p)h)d6#u#q@72)a2!oc3pyg"
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -67,9 +68,9 @@ WSGI_APPLICATION = "dcrm.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "elderco",
-        "USER": "root",
-        "PASSWORD": "Sharlotta2019",
+        "NAME": NAME_DB,
+        "USER": USER_DB,
+        "PASSWORD": PASSWORD_DB,
         "HOST": "localhost",
         "PORT": '3306',
     }
